@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-import com.example.Docker
+// import com.example.Docker
 
 def call(String imageName) {
                     echo "building the docker image..."
