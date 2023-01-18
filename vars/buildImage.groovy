@@ -7,6 +7,6 @@ def call(String imageName) {
                    withCredentials([usernamePassword(credentialsId: 'docker-hub-repo', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
                         sh "docker build -t $imagename ."
                         sh "echo $PASS | docker login -u $USER --password-stdin"
-                        sh "ocker push $imagename"
+                        sh "docker push $imagename"
     }
 } 
